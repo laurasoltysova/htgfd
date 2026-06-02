@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://elyyu2ld0duk"]
+
+[ext_resource type="Texture2D" uid="uid://bnf277hkvraaf" path="res://pixil-frame-0.png" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dixxtutj766x7" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://co7be5cc46w3j" path="res://platform.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://b1uqearfhi6gs" path="res://goal.tscn" id="4_1bvp3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ig7tw"]
+normal = Vector2(-0.0054420964, -0.9999852)
+distance = 141.03601
+
+[node name="Main" type="Node2D" unique_id=90808035]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1789970420]
+position = Vector2(5, 638)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1446734039]
+shape = SubResource("WorldBoundaryShape2D_ig7tw")
+
+[node name="Background" type="Sprite2D" parent="Ground" unique_id=263638347]
+position = Vector2(573.50006, -316.25)
+scale = Vector2(1.8807193, 1.7452317)
+texture = ExtResource("1_h2yge")
+
+[node name="Platform" parent="." unique_id=1954379352 instance=ExtResource("2_0xm2m")]
+position = Vector2(589, 262)
+
+[node name="Platform2" parent="." unique_id=55306307 instance=ExtResource("2_0xm2m")]
+position = Vector2(80, 196)
+
+[node name="Platform3" parent="." unique_id=813836878 instance=ExtResource("2_0xm2m")]
+position = Vector2(354, 371)
+
+[node name="Platform4" parent="." unique_id=1090767681 instance=ExtResource("2_0xm2m")]
+position = Vector2(375, 49)
+
+[node name="Platform5" parent="." unique_id=193237487 instance=ExtResource("2_0xm2m")]
+position = Vector2(824, 149)
+
+[node name="Goal" parent="." unique_id=1318453923 instance=ExtResource("4_1bvp3")]
+position = Vector2(5, -15)
+
+[node name="Player" parent="." unique_id=1181792845 instance=ExtResource("1_ig7tw")]
+position = Vector2(547, 152)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2017071776]
