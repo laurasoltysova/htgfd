@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b1uqearfhi6gs"]
+
+[ext_resource type="Script" uid="uid://na8ky3glo146" path="res://goal.gd" id="1_0qle8"]
+[ext_resource type="Texture2D" uid="uid://dwt4vsw5s44k0" path="res://slimeidle.svg" id="1_6k3qi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p20yd"]
+radius = 38.0
+height = 76.0
+
+[node name="Goal" type="Area2D" unique_id=1318453923]
+script = ExtResource("1_0qle8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1897383498]
+modulate = Color(1, 0.68235296, 0.17254902, 1)
+top_level = true
+position = Vector2(118, 170)
+scale = Vector2(5.4900002, 5.45)
+texture = ExtResource("1_6k3qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1773737258]
+position = Vector2(119, 176)
+shape = SubResource("CapsuleShape2D_p20yd")
